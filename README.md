@@ -14,4 +14,5 @@ Have a [closer look](https://excalidraw.com/#json=f7WOviSiPwA3vmNqBlYi9,4lpFLAOV
 - [x] Set up basic routing
 - [x] Set up functional TailwindCSS
 - [x] create a remote repo and push initial changes
+- [x] Create the homepage markup and style it a bit aesthetically
 - [ ] Fetch the data given and check what that returns

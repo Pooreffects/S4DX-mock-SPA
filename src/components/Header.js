@@ -12,12 +12,20 @@ function Header() {
         />
         <h2 className="text-gray-800 font-semibold text-xl">S4DX</h2>
       </Link>
-      <Link
-        to="/orders"
-        className="text-xl font-semibold  text-gray-800 hover-underline-animation"
-      >
-        Orders
-      </Link>
+      <nav>
+        <Link
+          to="/orders"
+          className="text-xl font-semibold mr-6  text-gray-800 hover-underline-animation"
+        >
+          Orders
+        </Link>
+        <Link
+          to="/chart"
+          className="text-xl font-semibold  text-gray-800 hover-underline-animation"
+        >
+          Visualize
+        </Link>
+      </nav>
     </div>
   );
 }

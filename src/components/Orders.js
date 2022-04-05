@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 
 /* Orders API url: https://616d5f766dacbb001794c9c0.mockapi.io/orders */
@@ -12,17 +12,13 @@ const fetchOrders = async () => {
 
 function Orders() {
   const [cardsLimit, setCardsLimit] = useState(12);
-  const { data, status } = useQuery('orders', fetchOrders);
+  const { data, status } = useQuery('orders', fetchOrders); // create loading state
 
   const slicedData = data?.slice(0, cardsLimit);
 
   const loadMore = () => {
     if (slicedData?.length > 0) setCardsLimit(cardsLimit + cardsLimit);
   };
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   return (
     <div className="container">
@@ -79,7 +75,7 @@ function Orders() {
           </div>
         ))}
       </div>
-      {slicedData.length > 0 && (
+      {slicedData?.length > 0 && (
         <div className="load">
           <button
             onClick={() => loadMore()}

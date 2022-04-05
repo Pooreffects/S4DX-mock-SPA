@@ -15,4 +15,15 @@ Have a [closer look](https://excalidraw.com/#json=f7WOviSiPwA3vmNqBlYi9,4lpFLAOV
 - [x] Set up functional TailwindCSS
 - [x] create a remote repo and push initial changes
 - [x] Create the homepage markup and style it a bit aesthetically
-- [ ] Fetch the data given and check what that returns
+- [x] Fetch the data given and check the preview
+- [x] Populate the data in cards
+- [x] Style the cards information for better UX
+- [x] Fix the long name issue, with the substring method
+- [x] Create the loadMore functionality
+- [x] Let's attempt implementing the Chart data visualization
+- [x] Install React-chartjs-2 that uses Chart.js
+- [x] Beforehand, let's create a basic navigtion to the Chart
+- [x] Create data visualization on a responsive Bar component
+- [ ] Make the orders grid responsive
+- [ ] Create a loading spinner component for both orders data and chart data
+- [ ] Create Unit Tests

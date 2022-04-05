@@ -26,6 +26,28 @@ body {
   margin: 0 auto;
 }
 
+.wrapper {
+  max-width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-gap: 3rem;
+  padding: 2rem;
+}
+
+.card {
+  text-align: left;
+  width: 320px;
+  padding: 2rem;
+  background-color: #cbd5e1;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 /* Underline animation on hover */
 .hover-underline-animation {
   display: inline-block;

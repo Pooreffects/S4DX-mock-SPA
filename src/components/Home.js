@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -14,7 +15,7 @@ function Home() {
           seamlessly access orders data and their associated information.
         </p>
         <button className="ml-10 mt-4  bg-slate-400 p-2 rounded font-primary font-medium text-slate-100 hover:bg-pink-700 ">
-          Get Orders
+          <Link to="/orders">Get Orders</Link>
         </button>
       </article>
       <div>

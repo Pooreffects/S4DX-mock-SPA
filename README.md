@@ -24,6 +24,17 @@ Have a [closer look](https://excalidraw.com/#json=f7WOviSiPwA3vmNqBlYi9,4lpFLAOV
 - [x] Install React-chartjs-2 that uses Chart.js
 - [x] Beforehand, let's create a basic navigtion to the Chart
 - [x] Create data visualization on a responsive Bar component
-- [ ] Make the orders grid responsive
-- [ ] Create a loading spinner component for both orders data and chart data
-- [ ] Create Unit Tests
+- [x] Make the orders grid responsive
+- [x] Create a loading spinner component
+- [] Create Unit Tests
+
+  ```
+  <!-- Note: -->
+  For the TDD, I am yet to get adept at writing tests to ensure scalable, maintainable, and robust software for better deliverance and overall user experience. This layer is fascinating and I am thrilled to dive deeper and learn both Unit and E2E Testing.
+  For the lack of timing yet next time I will make sure to reward myself and the potential team with production-grade testable code.
+  ```
+
+  ### Instructions
+
+  You can fork the repository on your local machine and run <code>npm install</code> to install dependencies.
+  This project uses the latest version of React 18, so you might face some console prompts because it is still an early release, but everything is pretty functional as you can run <code>npm run start</code> and see youreself 😁

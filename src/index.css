@@ -48,6 +48,12 @@ body {
   align-items: flex-start;
 }
 
+.load {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
 /* Underline animation on hover */
 .hover-underline-animation {
   display: inline-block;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 
 /* Orders API url: https://616d5f766dacbb001794c9c0.mockapi.io/orders */
@@ -11,7 +11,14 @@ const fetchOrders = async () => {
 };
 
 function Orders() {
+  const [cardsLimit, setCardsLimit] = useState(12);
   const { data, status } = useQuery('orders', fetchOrders);
+
+  const slicedData = data?.slice(0, cardsLimit);
+
+  const loadMore = () => {
+    if (slicedData?.length > 0) setCardsLimit(cardsLimit + cardsLimit);
+  };
 
   useEffect(() => {
     console.log(data);
@@ -20,10 +27,10 @@ function Orders() {
   return (
     <div className="container">
       <h1 className="text-gray-800 font-primary font-medium text-2xl text-center">
-        Current Lab Orders
+        Active Lab Orders
       </h1>
       <div className="wrapper">
-        {data?.map((order) => (
+        {slicedData?.map((order) => (
           <div key={order.id} className="card">
             <h3 className="text-gray-800 font-semibold font-primary">
               <span className="text-pink-700 font-semibold font-primary">
@@ -72,6 +79,16 @@ function Orders() {
           </div>
         ))}
       </div>
+      {slicedData.length > 0 && (
+        <div className="load">
+          <button
+            onClick={() => loadMore()}
+            className=" bg-slate-300 p-2 rounded font-primary font-medium  text-gray-800 hover:bg-pink-700 hover:text-gray-200"
+          >
+            Load more...
+          </button>
+        </div>
+      )}
     </div>
   );
 }

@@ -10,6 +10,12 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
+/* 
+- Components Registration is required for this package version
+- The docs are straightforward and all main components are configurable and customizable
+- For this example, Bar takes in Options and dynamic Datasets as props 
+*/
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -60,17 +66,18 @@ function ChartData() {
         'https://616d5f766dacbb001794c9c0.mockapi.io/samples-chart'
       );
       const result = await response.json();
+      /* This fetches and populates data into the arrays for updating the chartData state */
       result.samplesPerType.forEach((sample) => {
         chartDataset.push(sample.total);
         chartLabels.push(sample.sampleType);
       });
 
       setChartData({
-        labels: chartLabels,
+        labels: chartLabels, // this returns sampleType:[str]
         datasets: [
           {
             label: 'Samples Per Type',
-            data: chartDataset,
+            data: chartDataset, // this returns total:[num]
             borderColor: 'rgb(199,1,131)',
             backgroundColor: 'rgb(199,1,131, 0.4)',
           },

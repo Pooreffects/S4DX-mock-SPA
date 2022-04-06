@@ -21,6 +21,8 @@ body {
   margin: 0 auto;
 }
 
+/* Orders Cards Wrapper */
+
 .wrapper {
   max-width: 90vw;
   margin: 0 auto;
@@ -30,6 +32,8 @@ body {
   grid-gap: 3rem;
   padding: 2rem;
 }
+
+/* Orders Card */
 
 .card {
   text-align: left;
@@ -42,6 +46,8 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
+
+/* load more btn */
 
 .load {
   width: 100%;

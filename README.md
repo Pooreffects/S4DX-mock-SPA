@@ -26,6 +26,7 @@ Have a [closer look](https://excalidraw.com/#json=f7WOviSiPwA3vmNqBlYi9,4lpFLAOV
 - [x] Create data visualization on a responsive Bar component
 - [x] Make the orders grid responsive
 - [x] Create a loading spinner component
+- [x] Document the codebase and refactor some
 - [] Create Unit Tests
 
   ```

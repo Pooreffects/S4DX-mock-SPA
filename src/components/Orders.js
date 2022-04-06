@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from './Loading';
 
-/* Orders API url: https://616d5f766dacbb001794c9c0.mockapi.io/orders */
-
 const fetchOrders = async () => {
   const response = await fetch(
     'https://616d5f766dacbb001794c9c0.mockapi.io/orders'
@@ -16,6 +14,10 @@ function Orders() {
   const { data, status } = useQuery('orders', fetchOrders); // create loading state
 
   const slicedData = data?.slice(0, cardsLimit);
+  /* This could be implemented in various ways, yet due to knowing the size and settings of the returned data:
+    - Slice helps return a shollow copy of the returned data 
+    - I would fetch data once and populate it by limit functionality 
+  */
 
   const loadMore = () => {
     if (slicedData?.length > 0) setCardsLimit(cardsLimit + cardsLimit);

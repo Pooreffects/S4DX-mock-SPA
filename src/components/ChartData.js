@@ -76,7 +76,7 @@ function ChartData() {
         labels: chartLabels, // this returns sampleType:[str]
         datasets: [
           {
-            label: 'Samples Per Type',
+            label: 'Samples',
             data: chartDataset, // this returns total:[num]
             borderColor: 'rgb(199,1,131)',
             backgroundColor: 'rgb(199,1,131, 0.4)',

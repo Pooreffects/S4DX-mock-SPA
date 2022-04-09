@@ -27,11 +27,11 @@ Have a [closer look](https://excalidraw.com/#json=f7WOviSiPwA3vmNqBlYi9,4lpFLAOV
 - [x] Make the orders grid responsive
 - [x] Create a loading spinner component
 - [x] Document the codebase and refactor some
-- [] Create Unit Tests
+- [x] Create Unit Test (disclaimer: it's only an attempt)
 
   ```
   <!-- Note: -->
-  For the TDD, I am yet to get adept at writing tests to ensure scalable, maintainable, and robust software for better deliverance and overall user experience. This layer is fascinating and I am thrilled to dive deeper and learn both Unit and E2E Testing.
+  For the TDD, I am yet to get adept at writing tests (Jest API to be specific) to ensure scalable, maintainable, and robust software for better deliverance and overall user experience. This layer is fascinating and I am thrilled to dive deeper and learn both Unit and E2E Testing.
   For the lack of timing yet next time I will make sure to reward myself and the potential team with production-grade testable code.
   ```
 

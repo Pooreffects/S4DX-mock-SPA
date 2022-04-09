@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div className="container flex items-center justify-between">
-      <article className="space-y-6">
-        <h2 className="font-primary text-neutral-800 text-3xl font-medium leading-10">
+    <div className="container grid">
+      <article className="space-y-6 mt-10">
+        <h2 className="font-primary text-neutral-800 lg:text-3xl md:text-2xl text-xl font-medium leading-10">
           Laboraory Preanalytics <br />
           made simple for the first time, <br />
           at Smart4Diagnostics.
         </h2>
-        <p className="font-body text-xl max-w-md pl-4">
+        <p className="font-body lg:text-lg sm:text-base max-w-md lg:pl-4">
           This platform has curated functionalities to help our clients
           seamlessly access orders data and their associated information.
         </p>
@@ -19,7 +19,12 @@ function Home() {
         </button>
       </article>
       <div>
-        <img src="/hero-img.jpg" alt="A lab exhibit" />
+        <img
+          src="/hero-img.jpg"
+          width="700px"
+          height="700px"
+          alt="A lab exhibit"
+        />
       </div>
     </div>
   );

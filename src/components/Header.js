@@ -7,6 +7,8 @@ function Header() {
       <Link to="/" className="flex items-center">
         <img
           src="https://res.cloudinary.com/pooreffects/image/upload/c_scale,w_60/v1649102121/logo_epasmb.webp"
+          width="60px"
+          height="60px"
           className="logo"
           alt="Logo"
         />

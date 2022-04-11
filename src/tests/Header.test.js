@@ -5,27 +5,16 @@ import Header from '../components/Header';
 
 /* 
   # Header Test Block
-    - [x]  Links (passed)
+    - [x]  Are the navigation links rendered? (passed)
 */
 
-it('render Header Orders Link', () => {
+it('renders the Header Links', async () => {
   render(
     <MemoryRouter>
       <Header />
     </MemoryRouter>
   );
 
-  const ordersLink = screen.getByText(/orders/i);
-  expect(ordersLink).toBeInTheDocument();
-});
-
-it('render Header Visualize Link', () => {
-  render(
-    <MemoryRouter>
-      <Header />
-    </MemoryRouter>
-  );
-
-  const visualizeLink = screen.getByText(/visualize/i);
-  expect(visualizeLink).toBeInTheDocument();
+  expect(screen.getByText(/orders/i)).toBeInTheDocument();
+  expect(screen.getByText(/visualize/i)).toBeInTheDocument();
 });

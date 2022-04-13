@@ -11,7 +11,7 @@ const fetchOrders = async () => {
 
 function Orders() {
   const [cardsLimit, setCardsLimit] = useState(12);
-  const { data, status } = useQuery('orders', fetchOrders); // create loading state
+  const { data, status } = useQuery('orders', fetchOrders); // We neither need useEffect to fetch data nor useState to register the data using useQuery, Magical right! 😁
 
   const slicedData = data?.slice(0, cardsLimit);
   /* This could be implemented in various ways, yet due to knowing the size and settings of the returned data:
@@ -19,9 +19,13 @@ function Orders() {
     - I would fetch data once and populate it by limit functionality 
   */
 
-  const loadMore = () => {
+  function loadMore() {
     if (slicedData?.length > 0) setCardsLimit(cardsLimit + cardsLimit);
-  };
+  }
+
+  function hideSome() {
+    if (slicedData?.length === 49) setCardsLimit(12);
+  }
 
   return (
     <div className="container">
@@ -82,13 +86,23 @@ function Orders() {
           ))}
         </div>
       )}
-      {slicedData?.length > 0 && (
+      {slicedData?.length < 49 && (
         <div className="load">
           <button
             onClick={() => loadMore()}
             className=" bg-slate-300 p-2 rounded font-primary font-medium  text-gray-800 hover:bg-pink-700 hover:text-gray-200"
           >
             Load more...
+          </button>
+        </div>
+      )}
+      {slicedData?.length === 49 && (
+        <div className="load">
+          <button
+            onClick={() => hideSome()}
+            className=" bg-slate-300 p-2 rounded font-primary font-medium  text-gray-800 hover:bg-pink-700 hover:text-gray-200"
+          >
+            Hide some
           </button>
         </div>
       )}

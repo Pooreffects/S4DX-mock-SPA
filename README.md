@@ -37,5 +37,6 @@ Have a [closer look](https://excalidraw.com/#json=f7WOviSiPwA3vmNqBlYi9,4lpFLAOV
 
   ### Instructions
 
-  You can fork the repository on your local machine and run <code>npm install</code> to install dependencies.
-  This project uses the latest version of React 18, so you might face some console prompts because it is still an early release, but everything is pretty functional as you can run <code>npm run start</code> and see youreself 😁
+  - You can fork the repository on your local machine and run <code>npm install</code> to install dependencies.
+  - This project uses the latest version of React 18, so you might face some console prompts because it is still an early release, but everything is pretty functional as you can run <code>npm run start</code> and see youreself 😁
+  - You can run react-testing-library / Jest Unit Test via <code>npm run test</code>

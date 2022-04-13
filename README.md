@@ -1,5 +1,7 @@
 ## S4DX - Challenge
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/60fcaf95-ff5a-4539-a0f9-3a34fd1af73c/deploy-status)](https://app.netlify.com/sites/s4dx-mock/deploys)
+
 ### _Desc._
 
 _A datashow for laboratory orders basically a React SPA powered by TailwindCSS + React-Query + Chart.js_

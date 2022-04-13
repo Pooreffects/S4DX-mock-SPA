@@ -7,6 +7,7 @@
 _A datashow for laboratory orders basically a React SPA powered by TailwindCSS + React-Query + Chart.js_
 
 Here's a visual representation on my initial take on it
+
 ![Sketch](/public/sketch.png)
 Have a [closer look](https://excalidraw.com/#json=f7WOviSiPwA3vmNqBlYi9,4lpFLAOVDmr2FCdPojZTLw)
 

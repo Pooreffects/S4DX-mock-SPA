@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
+import Button from './Button';
+import Card from './Card';
 import Loading from './Loading';
 
 const fetchOrders = async () => {
@@ -37,74 +39,15 @@ function Orders() {
       {status === 'success' && (
         <div className="wrapper">
           {slicedData?.map((order) => (
-            <div key={order.id} className="card">
-              <h3 className="text-gray-800 font-semibold font-primary">
-                <span className="text-pink-700 font-semibold font-primary">
-                  Name:
-                </span>{' '}
-                {order.laboratory.name.split(',')[0]}
-              </h3>
-              <ul>
-                <li className="text-gray-800 font-semibold font-primary">
-                  <span className="text-pink-700 font-semibold font-body">
-                    Address:{' '}
-                  </span>
-                  {order.laboratory.address}
-                </li>
-                <li className="text-gray-800 font-semibold font-primary">
-                  <span className="text-pink-700 font-semibold font-body">
-                    City:{' '}
-                  </span>
-                  {order.laboratory.city}
-                </li>
-                <li className="text-gray-800 font-semibold font-primary">
-                  <span className="text-pink-700 font-semibold font-body">
-                    Zip:{' '}
-                  </span>
-                  {order.laboratory.zipCode}
-                </li>
-                <li className="text-gray-800 font-semibold font-primary">
-                  <span className="text-pink-700 font-semibold font-body">
-                    Country:{' '}
-                  </span>
-                  {order.laboratory.country}
-                </li>
-                <li className="text-gray-800 font-semibold font-primary">
-                  <span className="text-pink-700 font-semibold font-body">
-                    Phone:{' '}
-                  </span>
-                  {order.laboratory.phone}
-                </li>
-                <li className="text-gray-800 font-semibold font-primary">
-                  <span className="text-pink-700 font-semibold font-body">
-                    Contact:{' '}
-                  </span>
-                  {order.laboratory.contact}
-                </li>
-              </ul>
-            </div>
+            <Card order={order} />
           ))}
         </div>
       )}
       {slicedData?.length < 49 && (
-        <div className="load">
-          <button
-            onClick={() => loadMore()}
-            className=" bg-slate-300 p-2 rounded font-primary font-medium  text-gray-800 hover:bg-pink-700 hover:text-gray-200"
-          >
-            Load more...
-          </button>
-        </div>
+        <Button name="Load more..." onClick={loadMore} />
       )}
       {slicedData?.length === 49 && (
-        <div className="load">
-          <button
-            onClick={() => hideSome()}
-            className=" bg-slate-300 p-2 rounded font-primary font-medium  text-gray-800 hover:bg-pink-700 hover:text-gray-200"
-          >
-            Hide some
-          </button>
-        </div>
+        <Button name="Hide some" onClick={hideSome} />
       )}
     </div>
   );

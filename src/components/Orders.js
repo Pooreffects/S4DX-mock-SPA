@@ -39,7 +39,7 @@ function Orders() {
       {status === 'success' && (
         <div className="wrapper">
           {slicedData?.map((order) => (
-            <Card order={order} />
+            <Card key={order.id} order={order} />
           ))}
         </div>
       )}

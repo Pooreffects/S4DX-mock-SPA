@@ -9,6 +9,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import fetchChartData from '../utils/fetchChartData';
 
 /* 
 - Components Registration is required for this package version
@@ -58,34 +59,7 @@ function ChartData() {
   });
 
   useEffect(() => {
-    const fetchChartData = async () => {
-      let chartDataset = [];
-      let chartLabels = [];
-
-      const response = await fetch(
-        'https://616d5f766dacbb001794c9c0.mockapi.io/samples-chart'
-      );
-      const result = await response.json();
-      /* This fetches and populates data into the arrays for updating the chartData state */
-      result.samplesPerType.forEach((sample) => {
-        chartDataset.push(sample.total);
-        chartLabels.push(sample.sampleType);
-      });
-
-      setChartData({
-        labels: chartLabels, // this returns sampleType:[str]
-        datasets: [
-          {
-            label: 'Samples',
-            data: chartDataset, // this returns total:[num]
-            borderColor: 'rgb(199,1,131)',
-            backgroundColor: 'rgb(199,1,131, 0.4)',
-          },
-        ],
-      });
-    };
-
-    fetchChartData();
+    fetchChartData(setChartData);
   }, []);
 
   return (

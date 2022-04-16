@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card({ order }) {
   return (
-    <div key={order.id} className="card">
+    <div className="card">
       <h3 className="text-gray-800 font-semibold font-primary">
         <span className="text-pink-700 font-semibold font-primary">Name:</span>{' '}
         {order.laboratory.name.split(',')[0]}
